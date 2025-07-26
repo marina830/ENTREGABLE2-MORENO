@@ -1,0 +1,207 @@
+/* Estilo general */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('fondo.jpg'); /* o fondo.png si no renombraste */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Encabezado */
+.header {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 120px; /* Aumenta el tamaño */
+  height: auto;
+}
+
+  
+
+
+/* Botón de teléfono */
+.telefono {
+  position: absolute;
+  top: 1rem;
+  right: 8rem;
+  background: white;
+  color: black;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Menú desplegable */
+.menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #222;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.menu-content a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #222;
+  text-decoration: none;
+}
+.menu-toggle:hover .menu-content {
+  display: block;
+}
+.menu:hover .menu-content,
+.menu-content:hover {
+  display: block;
+}
+
+/* Cotizador */
+.cotizador {
+  margin: 4rem auto;
+  max-width: 1000px;
+  background: linear-gradient(90deg, #f9d423, #ff4e50, #e03c8a);
+  padding: 2rem;
+  border-radius: 60px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Formulario */
+form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+input,
+select {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.viajeros {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* Botón cotizar */
+#btnCotizar {
+  background: #58b7dd;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  grid-column: span 2;
+}
+
+/* Resultado */
+.resultado {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #222;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+.info-empresa {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #222;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  line-height: 1.6;
+}
+.form-reintegro {
+  background-color: rgba(255,255,255,0.95);
+  color: #2e1655;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.form-reintegro h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+#reintegroForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#reintegroForm input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 200px;
+  font-size: 1rem;
+  color: #444;
+}
+
+#reintegroForm button {
+  padding: 0.7rem 1.5rem;
+  background: white;
+  color: #501a75;
+  border: 1px solid #501a75;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#reintegroForm button:hover {
+  background-color: #501a75;
+  color: white;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COTAMAR - Cotizador de Viajes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <img src="logo-cotamar.png" alt="Logo COTAMAR" class="logo">
+    <h1>TODO ES POSIBLE...<br><span>TU VIAJE TAMBIÉN</span></h1>
+    <button class="telefono">Venta Telefónica: +54 351 123-4567</button>
+    <div class="menu">
+  <div class="menu-toggle">
+    <button class="menu-btn">≡</button>
+    <div class="menu-content">
+      <a href="#" onclick="mostrarInfo()">¿Quiénes somos?</a>
+      <a href="#" onclick="mostrarReintegro()">Solicitar reintegro</a>
+    </div>
+  </div>
+</div>
+  </header>
+
+  <main>
+    <section class="cotizador">
+        <div id="infoEmpresa" class="info-empresa" style="display: none;"></div>
+        <div id="formReintegro" class="form-reintegro" style="display: none;">
+  <h2>Solicitar reintegro</h2>
+  <form id="reintegroForm">
+    <input type="text" id="voucher" placeholder="Voucher Id" required>
+    <input type="text" id="documento" placeholder="Documento/Pasaporte" required>
+    <button type="submit">Validar</button>
+  </form>
+</div>
+      <form id="formCotizacion">
+        <select id="pais">
+          <option value="">País de residencia</option>
+          <option>Argentina</option>
+          <option>Brasil</option>
+          <option>Chile</option>
+          <option>Uruguay</option>
+          <option>Paraguay</option>
+          <option>Perú</option>
+          <option>Bolivia</option>
+        </select>
+
+        <select id="destino">
+          <option value="">Destino</option>
+          <option>Córdoba</option>
+          <option>Mendoza</option>
+          <option>Jujuy</option>
+          <option>Salta</option>
+          <option>Cataratas</option>
+          <option>Río de Janeiro</option>
+          <option>Santiago de Chile</option>
+        </select>
+
+        <input type="date" id="salida">
+        <input type="date" id="regreso">
+
+        <div class="viajeros">
+          <label>Adultos <input type="number" id="adultos" min="1" value="1"></label>
+          <label>Menores <input type="number" id="menores" min="0" value="0"></label>
+        </div>
+
+        <button type="submit" id="btnCotizar">Cotizar</button>
+      </form>
+
+      <div class="resultado" id="resultadoCotizacion"></div>
+    </section>
+  </main>
+
+  <script src="cotizador.js"></script>
+</body>
+</html>
