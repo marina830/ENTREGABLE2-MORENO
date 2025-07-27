@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-image: url('fondo.jpg'); /* o fondo.png si no renombraste */
+  background-image: url('fondo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,12 +21,9 @@ body {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  width: 120px; /* Aumenta el tamaño */
+  width: 120px;
   height: auto;
 }
-
-  
-
 
 /* Botón de teléfono */
 .telefono {
@@ -75,9 +72,8 @@ body {
   color: #222;
   text-decoration: none;
 }
-.menu-toggle:hover .menu-content {
-  display: block;
-}
+
+.menu-toggle:hover .menu-content,
 .menu:hover .menu-content,
 .menu-content:hover {
   display: block;
@@ -97,15 +93,34 @@ body {
   align-items: center;
 }
 
-/* Formulario */
 form {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  align-items: center;
 }
 
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.boton-container {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+#btnCotizar {
+  background: #58b7dd;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
 input,
 select {
   padding: 0.5rem;
@@ -115,6 +130,32 @@ select {
   width: 100%;
 }
 
+/* Etiquetas */
+form label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  display: inline-block;
+}
+
+/* Contenedor fechas */
+.fechas-group {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.fechas-group .fecha {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs de fechas */
+.fecha input[type="date"] {
+  margin: 0;
+}
+
+/* Viajeros */
 .viajeros {
   display: flex;
   flex-direction: column;
@@ -145,6 +186,8 @@ select {
   width: 100%;
   text-align: center;
 }
+
+/* Info empresa */
 .info-empresa {
   background-color: rgba(255, 255, 255, 0.95);
   color: #222;
@@ -157,6 +200,8 @@ select {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   line-height: 1.6;
 }
+
+/* Reintegro */
 .form-reintegro {
   background-color: rgba(255,255,255,0.95);
   color: #2e1655;
@@ -204,4 +249,101 @@ select {
 #reintegroForm button:hover {
   background-color: #501a75;
   color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo {
+    width: 80px;
+    position: static;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+@media (max-width: 768px) {
+  .logo {
+    width: 80px;
+    position: static;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+
+  /* Botón Cotizar ocupa solo una columna en móviles */
+  .boton-container {
+    grid-column: span 1;
+  }
+}
+
+  .header {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .telefono {
+    position: static;
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .menu {
+    position: static;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .menu-content {
+    position: static;
+    background-color: rgba(255,255,255,0.95);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    display: block;
+  }
+
+  .cotizador {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  #btnCotizar {
+    grid-column: span 1;
+    width: 100%;
+  }
+
+  .resultado {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .info-empresa,
+  .form-reintegro {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  #reintegroForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #reintegroForm input,
+  #reintegroForm button {
+    width: 100%;
+  }
+
+  .fechas-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
